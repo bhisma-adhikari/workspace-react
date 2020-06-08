@@ -1,0 +1,46 @@
+import React from 'react'; 
+import { Link, Redirect } from 'react-router-dom'; 
+
+const Profile = (props) => {
+    console.log(props);
+    
+    // // option 1
+    // const redir = () => {
+    //     return (
+    //         <Redirect to=/ /> 
+    //     );
+    // }; 
+
+    // // same as option 1 : no need to use {} for single stmt 
+    // const redir = () => <Redirect to=/ /> 
+
+    
+    // // option 2
+    const redir = () => {
+        // it's not react, it's just javascript 
+        // just push the route where you wanna redirect to 
+
+        // props.history.push('/');  // redirect to home (see index.js)
+        props.history.push('sdfrsdgfsdfwe');  // redirect to 404 by passing random string as the route(see index.js)
+        console.log(props); 
+    }; 
+
+    
+    
+    return (
+        <div>
+            <Link to={{
+                pathname: 
+            }}>take me to /profile/posts</Link>
+            
+            {/* <Redirect to=/ />  */}
+
+            {redir()}
+        </div>
+    );
+
+
+    
+}
+
+export default Profile; 
